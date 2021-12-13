@@ -26,7 +26,6 @@ namespace Tests
             productPage.buttonIconAddProductBay();
             productPage.buttonProductsInCart();
             ShoppingCartPage shoppingCartPage = new(driver);
-        
             Assert.IsTrue(MyAssert.MyIsTrue(_textSum, shoppingCartPage.textSumProductsInCart()), "don't incorect sum product in cart");
         }
     }
