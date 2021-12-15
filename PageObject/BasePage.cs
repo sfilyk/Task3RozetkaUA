@@ -51,7 +51,7 @@ namespace PageObject
     }
     public static class MyAssert
     {
-        public static bool MyIsTrue(int first, string second)
+        public static bool MyIsTrue(string first, string second)
         {
             string numericString = "";
             foreach (char c in second)
@@ -63,7 +63,7 @@ namespace PageObject
                 else
                     break;
             }
-            if (first < Convert.ToInt32(numericString))
+            if (Convert.ToInt32(first) < Convert.ToInt32(numericString))
             {
                 return true;
             }

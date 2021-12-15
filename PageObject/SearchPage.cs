@@ -13,7 +13,7 @@ namespace PageObject
         public void searchText(string text) => driver.FindElement(_fieldSearch).SendKeys(text);
         public void searchTextEnter() => driver.FindElement(_fieldSearch).SendKeys(Keys.Enter);
         public void searchLineFirm(string text) => driver.FindElement(_searchLineFirm).SendKeys(text);
-        public void searchLineTextClick() => driver.FindElement(_searchLineFirmClick,300).Click();
+        public void searchLineTextClick() => driver.FindElement(_searchLineFirmClick,600).Click();
         public void waitSearchLineTextClick() => waitforelement(driver,_searchLineFirmClick);
 
     }
