@@ -12,15 +12,15 @@ namespace Tests
         //private const string _searchProduct = "Ноутбуки";
         //private const string _searchFirm = "HP";
 
-        [TestCaseSource("TestDataXml")]
-        public void productToCartViaSearch(string searchProduct, string searchFirm, string textSum)
+        [TestCaseSource("testDataXml")]
+        public void productToCartViaSearch(string _searchProduct, string _searchFirm, string _textSum)
         {
             HomePage homePage = new(driver);
             homePage.ClickMenuCategoriesNetboock();
             SearchPage searchPage = new(driver);
-            searchPage.searchText(searchProduct);
+            searchPage.searchText(_searchProduct);
             searchPage.searchTextEnter();
-            searchPage.searchLineFirm(searchFirm);
+            searchPage.searchLineFirm(_searchFirm);
             searchPage.waitSearchLineTextClick();
             searchPage.searchLineTextClick();
             ProductPage productPage = new(driver);
@@ -30,10 +30,9 @@ namespace Tests
             productPage.buttonIconAddProductBay();
             productPage.buttonProductsInCart();
             ShoppingCartPage shoppingCartPage = new(driver);
-            Assert.IsTrue(MyAssert.MyIsTrue(textSum, shoppingCartPage.textSumProductsInCart()), "don't incorect sum product in cart");
+            Assert.IsTrue(MyAssert.MyIsTrue(_textSum, shoppingCartPage.textSumProductsInCart()), "don't incorect sum product in cart");
         }
-        private static IEnumerable TestDataXml => GetBaseTestXml();
-        private static IEnumerable GetBaseTestXml()
+        public static IEnumerable testDataXml()
         {
             var doc = XDocument.Load(@"C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\TestData.xml");
             return
