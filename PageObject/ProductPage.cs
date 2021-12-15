@@ -14,7 +14,7 @@ namespace PageObject
        
         public void buttonChoiceByPric() => driver.FindElement(_buttonChoiceByPrice, 300).Click();
         public void buttonChoiceByPriceExpensive() => driver.FindElement(_buttonChoiceByPriceExpensive, 300).Click();
-        public void buttonIconAddProductBay() => driver.FindElement(_buttonIconAddProductBay, 600).Click();
+        public void buttonIconAddProductBay() => driver.FindElement(_buttonIconAddProductBay, 1000).Click();
         public void waitButtonIconAddProductBay() => waitforelement(driver, _buttonIconAddProductBay);
         public void buttonProductsInCart() => driver.FindElement(_buttonProductsInCart, 300).Click();
     }

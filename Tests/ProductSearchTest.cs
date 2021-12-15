@@ -31,16 +31,6 @@ namespace Tests
             productPage.buttonProductsInCart();
             ShoppingCartPage shoppingCartPage = new(driver);
             Assert.IsTrue(MyAssert.MyIsTrue(_textSum, shoppingCartPage.textSumProductsInCart()), "don't incorect sum product in cart");
-        }
-        public static IEnumerable testDataXml()
-        {
-            var doc = XDocument.Load(@"C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\TestData.xml");
-            return
-            from vars in doc.Descendants("vars")
-            let searchProduct = vars.Attribute("searchProduct").Value
-            let searchFirm = vars.Attribute("searchFirm").Value
-            let textSum = vars.Attribute("textSum").Value
-            select new object[] { searchProduct, searchFirm, textSum };
-        }
+        }        
     }
 }

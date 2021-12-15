@@ -99,3 +99,4 @@ C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\obj\Release\net6.0
 C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\obj\Release\net6.0\ref\PageObject.dll
 C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\obj\Release\net6.0\PageObject.pdb
 C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\obj\Release\net6.0\PageObject.genruntimeconfig.cache
+C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\bin\Release\net6.0\TestData.xml
