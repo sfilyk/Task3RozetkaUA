@@ -12,7 +12,7 @@ namespace Tests
         //private const string _searchProduct = "Ноутбуки";
         //private const string _searchFirm = "HP";
 
-        [TestCaseSource("BaseTestXml")]
+        [TestCaseSource("TestDataXml")]
         public void productToCartViaSearch(string searchProduct, string searchFirm, string textSum)
         {
             HomePage homePage = new(driver);
@@ -32,7 +32,7 @@ namespace Tests
             ShoppingCartPage shoppingCartPage = new(driver);
             Assert.IsTrue(MyAssert.MyIsTrue(textSum, shoppingCartPage.textSumProductsInCart()), "don't incorect sum product in cart");
         }
-        private static IEnumerable BaseTestXml => GetBaseTestXml();
+        private static IEnumerable TestDataXml => GetBaseTestXml();
         private static IEnumerable GetBaseTestXml()
         {
             var doc = XDocument.Load(@"C:\Users\Serhii\Desktop\EpamWEBtest\Task3RozetkaUA\PageObject\TestData.xml");
